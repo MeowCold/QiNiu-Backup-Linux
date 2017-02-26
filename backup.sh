@@ -1,4 +1,7 @@
 #!/bin/bash
+# 原作者:fazero(https://blog.fazero.me/)
+# 修改者 MeowCold(https://github.com/MeowCold)
+
 SCRIPT_DIR="/root" #这个改成你存放刚刚下载下来的qshell的文件夹位置
 BACKUP_SRC="/home/wwwroot /usr/local/nginx/conf" #这个是你想要备份的本地VPS上的文件，不同的目录用空格分开
 BACKUP_DST="/tmp" #这个是你暂时存放备份压缩文件的地方，一般用/tmp即可
