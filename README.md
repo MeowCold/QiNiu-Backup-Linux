@@ -25,7 +25,6 @@ Removing leading `/' from member names
 # 使用
 ```
 ./qshell account AccessKey SecretKey
-
 ```
 使用qiniu官方网站中 个人面板-->密钥管理-->创建密钥 来获得 AccessKey 和 SecretKey
 
@@ -33,22 +32,31 @@ Removing leading `/' from member names
 
 # 手动备份
 然后改为可执行文件：
+```
 chmod +x backup.sh #赋予权限
+```
 运行的时候就输入下面的代码即可：
+```
 ./backup.sh
+```
 然后通过 cron 来设置定时运行脚本：
+```
 crontab -e
 加入以下代码，:wq 保存
 0 5 * * * /bin/bash /root/backup.sh
-
+```
 
 # 定时备份
-```bash
+```
 crontab -e
+```
 加入以下代码，:wq 保存
 # 填入以下,每天凌晨5点执行一次备份,这里可以根据需求进行调整
+```
 0 5 * * * /bin/bash /root/backup.sh
+```
 # 这里是配置成每月备份一次的设置
+```
 * * * 1 * /bin/bash /foo/backup.sh
 ```
 
